@@ -10,7 +10,7 @@ using Microsoft.Extensions.Options;
 namespace HCI.Kafka.Avro.Producer;
 
 /// <summary>
-/// Production-grade Avro producer for MedicinalProduct events.
+/// Avro producer for MedicinalProduct events.
 ///
 /// HOW AVRO SERIALISATION WORKS END-TO-END
 /// ─────────────────────────────────────────────────────────────────────────────
@@ -25,10 +25,6 @@ namespace HCI.Kafka.Avro.Producer;
 ///    b. Serializer writes [0x00][cached_id][avro_payload]
 ///    c. Throughput is identical to JSON (no SR overhead)
 ///
-/// KEY DIFFERENCE FROM MODULE 1 (JSON)
-/// ─────────────────────────────────────────────────────────────────────────────
-/// Module 1: .SetValueSerializer(new JsonSerializer&lt;MedicinalProduct&gt;())
-/// Module 3: .SetValueSerializer(new AvroSerializer&lt;MedicinalProduct&gt;(schemaRegistryClient))
 ///
 /// The Avro serializer:
 ///   ✓ Validates the object against the registered schema at produce time
@@ -39,7 +35,7 @@ namespace HCI.Kafka.Avro.Producer;
 /// SubjectNameStrategy:
 ///   Default: TopicNameStrategy → subject = "{topic}-value"
 ///   Alternative: RecordNameStrategy → subject = "{record-namespace}.{record-name}"
-///   HCI uses TopicNameStrategy (one schema type per topic).
+///   The training uses TopicNameStrategy (one schema type per topic).
 /// </summary>
 public sealed class AvroMedicinalProductProducer : IAsyncDisposable
 {
@@ -73,11 +69,6 @@ public sealed class AvroMedicinalProductProducer : IAsyncDisposable
         };
 
         // ── AvroSerializerConfig ───────────────────────────────────────────────
-        // AutoRegisterSchemas = true:  Producer registers schema if not found (dev/CI friendly)
-        // AutoRegisterSchemas = false: Schema must exist before produce (production safety)
-        //
-        // TRAINING NOTE: Toggle this to false and try producing without calling
-        // HciSchemaRegistrar.RegisterAllSchemasAsync() first — observe the error.
         var avroConfig = new AvroSerializerConfig
         {
             AutoRegisterSchemas = false,

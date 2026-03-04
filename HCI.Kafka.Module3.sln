@@ -1,0 +1,43 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCI.Kafka.Avro.Contracts", "src\HCI.Kafka.Avro.Contracts\HCI.Kafka.Avro.Contracts.csproj", "{C1D2E3F4-0001-0001-0001-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCI.Kafka.Avro.SchemaRegistry", "src\HCI.Kafka.Avro.SchemaRegistry\HCI.Kafka.Avro.SchemaRegistry.csproj", "{C1D2E3F4-0002-0002-0002-000000000002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCI.Kafka.Avro.Producer", "src\HCI.Kafka.Avro.Producer\HCI.Kafka.Avro.Producer.csproj", "{C1D2E3F4-0003-0003-0003-000000000003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCI.Kafka.Avro.Consumer", "src\HCI.Kafka.Avro.Consumer\HCI.Kafka.Avro.Consumer.csproj", "{C1D2E3F4-0004-0004-0004-000000000004}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCI.Kafka.Avro.Tests", "tests\HCI.Kafka.Avro.Tests\HCI.Kafka.Avro.Tests.csproj", "{C1D2E3F4-0005-0005-0005-000000000005}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1D2E3F4-0001-0001-0001-000000000001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D2E3F4-0001-0001-0001-000000000001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D2E3F4-0001-0001-0001-000000000001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D2E3F4-0001-0001-0001-000000000001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D2E3F4-0002-0002-0002-000000000002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D2E3F4-0002-0002-0002-000000000002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D2E3F4-0002-0002-0002-000000000002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D2E3F4-0002-0002-0002-000000000002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D2E3F4-0003-0003-0003-000000000003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D2E3F4-0003-0003-0003-000000000003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D2E3F4-0003-0003-0003-000000000003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D2E3F4-0003-0003-0003-000000000003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D2E3F4-0004-0004-0004-000000000004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D2E3F4-0004-0004-0004-000000000004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D2E3F4-0004-0004-0004-000000000004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D2E3F4-0004-0004-0004-000000000004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D2E3F4-0005-0005-0005-000000000005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D2E3F4-0005-0005-0005-000000000005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D2E3F4-0005-0005-0005-000000000005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D2E3F4-0005-0005-0005-000000000005}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

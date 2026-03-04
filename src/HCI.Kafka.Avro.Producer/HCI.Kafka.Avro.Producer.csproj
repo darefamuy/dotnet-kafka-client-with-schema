@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HCI.Kafka.Avro.Producer</RootNamespace>
+    <UserSecretsId>hci-kafka-avro-producer</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.4.0" />
+    <PackageReference Include="Confluent.SchemaRegistry" Version="2.4.0" />
+    <PackageReference Include="Confluent.SchemaRegistry.Serdes.Avro" Version="2.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HCI.Kafka.Avro.Contracts\HCI.Kafka.Avro.Contracts.csproj" />
+    <ProjectReference Include="..\HCI.Kafka.Avro.SchemaRegistry\HCI.Kafka.Avro.SchemaRegistry.csproj" />
+  </ItemGroup>
+</Project>

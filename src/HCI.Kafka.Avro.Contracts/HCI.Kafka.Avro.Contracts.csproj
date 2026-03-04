@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HCI.Kafka.Avro.Contracts</RootNamespace>
+    <!-- NuGet packaging metadata — this library is shared across all HCI services -->
+    <PackageId>HCI.Kafka.Avro.Contracts</PackageId>
+    <Version>1.0.0</Version>
+    <Description>Avro-generated domain contracts for HCI pharmaceutical event streaming</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Confluent.SchemaRegistry.Serdes.Avro provides:
+        - AvroSerializer<T> / AvroDeserializer<T>
+        - CachedSchemaRegistryClient
+        - ISpecificRecord (Avro C# generated class base interface)
+      Apache.Avro provides the Avro runtime (GenericRecord, SpecificRecord, Schema parsing)
+    -->
+    <PackageReference Include="Confluent.SchemaRegistry" Version="2.4.0" />
+    <PackageReference Include="Confluent.SchemaRegistry.Serdes.Avro" Version="2.4.0" />
+    <PackageReference Include="Apache.Avro" Version="1.11.3" />
+  </ItemGroup>
+</Project>

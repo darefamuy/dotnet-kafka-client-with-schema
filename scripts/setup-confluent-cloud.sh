@@ -58,6 +58,12 @@ create_topic "hci.medicinal-products.avro"    6  3
 create_topic "hci.drug-alerts.avro"           6  90
 create_topic "hci.price-updates.avro"      3  30
 create_topic "hci.medicinal-products.avro.dlq" 6 30
+create_topic "hci.products.v1"    6  3
+create_topic "hci.prices.v1"           6  90
+create_topic "hci.alerts.v1"      3  30
+create_topic "hci.medicinal_products" 6 30
+create_topic "hci.price_updates"     3  30
+create_topic "hci.drug_alerts" 6 30
 echo "      ✓ Topics created"
 
 # ── Register Avro schemas ─────────────────────────────────────────────────────
